@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rzharo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Modal de Boas-Vindas -->
+    <div class="welcome-modal active">
+        <div class="welcome-content">
+            <h1>Toque para continuar</h1>
+            <p>Tap to continue</p>
+        </div>
+    </div>
+
+    <div class="video-background">
+        <video loop autoplay muted id="bg-video">
+            <source src="assets/videos/background.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+    </div>
+
+    <div class="container">
+        <!-- Card 1 - Player de Música (atualizado) -->
+<div class="card music-card">
+    <div class="media-container">
+        <!-- Elemento para imagem (fallback) -->
+        <div class="music-banner"></div>
+        <!-- Elemento para vídeo -->
+        <video class="video-banner" muted loop></video>
+    </div>
+    <div class="music-info">
+        <h2 class="music-title">Nome da Música</h2>
+        <p class="music-artist">Artista</p>
+    </div>
+    <div class="music-player">
+        <input type="range" class="progress-bar" value="0">
+        <div class="music-controls">
+            <button class="control-btn prev-btn"><i class="fas fa-backward"></i></button>
+            <button class="control-btn play-btn"><i class="fas fa-play"></i></button>
+            <button class="control-btn next-btn"><i class="fas fa-forward"></i></button>
+        </div>
+        <div class="volume-control">
+            <i class="fas fa-volume-up volume-icon"></i>
+            <input type="range" class="volume-bar" min="0" max="100" value="80">
+        </div>
+    </div>
+</div>
+
+        <!-- Card 2 - Perfil (alterado) -->
+        <div class="card profile-card">
+            <div class="profile-banner"></div>
+            <div class="profile-content">
+                <div class="profile-pic"></div>
+                <div class="profile-info">
+                    <h2>rzharo <span class="verified"><i class="fas fa-check-circle"></i></span></h2>
+                    <p class="social-phrase">Irmãos, ⁠não sejais meninos no entendimento, mas sede meninos na malícia, e adultos no entendimento.</p>
+                    <p class="social-phrase">I Coríntios 14:20</p>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn twitch"><i class="fab fa-twitch"></i></a>
+                        <a href="#" class="social-btn youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-btn discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                    
+                    <button class="info-btn">Informations</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 - Setup (alterado) -->
+        <div class="card setup-card">
+            <h2 class="setup-title">SETUP</h2>
+            <div class="setup-items">
+                <div class="setup-item">
+                    <div class="item-icon"><i class="fas fa-microchip"></i></div>
+                    <h3 class="item-title">i3 4170</h3>
+                    <p class="item-desc">3.70 GHz</p>
+                    <button class="item-btn"
+                        data-link="https://www.intel.com.br/content/www/br/pt/products/sku/77490/intel-core-i34170-processor-3m-cache-3-70-ghz/specifications.html">Ver
+                        mais</button>
+                </div>
+                <div class="setup-item">
+                    <div class="item-icon"><i class="fas fa-desktop"></i></div>
+                    <h3 class="item-title">Video Integrado</h3>
+                    <button class="item-btn">Ver mais</button>
+                </div>
+                <div class="setup-item">
+                    <div class="item-icon"><i class="fas fa-memory"></i></div>
+                    <h3 class="item-title">16GB</h3>
+                    <p class="item-desc">DDR3 1600MHz</p>
+                    <button class="item-btn"
+                        data-link="https://produto.mercadolivre.com.br/MLB-2623676909-memoria-ram-8gb-ddr3-1600mhz-gamer-original-nota-fiscal-_JM?quantity=1">Ver
+                        mais</button>
+                </div>
+                <div class="setup-item">
+                    <div class="item-icon"><i class="fas fa-hdd"></i></div>
+                    <h3 class="item-title">SSD Patriot Burst Elite</h3>
+                    <p class="item-desc">120GB</p>
+                    <button class="item-btn"
+                        data-link="https://www.mercadolivre.com.br/ssd-disco-solido-interno-sata-iii-25-120gb-burst-elite-patriot-para-computador-notebook-cor-preto/p/MLB21641640?pdp_filters=item_id%3AMLB4158573939&from=gshop&matt_tool=61921241&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090354535&matt_ad_group_id=173090630876&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882734651&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735098660&matt_product_id=MLB21641640-product&matt_product_partition_id=2390887735415&matt_target_id=pla-2390887735415&cq_src=google_ads&cq_cmp=22090354535&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22090354535">Ver
+                        mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal de Informações -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-card">
+                <h2 class="modal-title">INFORMAÇÕES</h2>
+                <p class="modal-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies
+                    tincidunt.
+                </p>
+                <div class="modal-divider"></div>
+                <button class="modal-close-btn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
