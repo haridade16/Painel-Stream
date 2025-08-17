@@ -287,4 +287,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ========== INICIALIZAÇÃO DO SITE ========== //
     initializeSite();
+
 });
+
+const titles = ["</>", "!", "!R", "!Rz", "!Rzh", "!Rzh4", "!Rzh4r", "!Rzh4r0"];
+    let index = 0;
+    setInterval(function() {
+        document.title = titles[index];
+        index = (index + 1) % titles.length;
+    }, 300);
